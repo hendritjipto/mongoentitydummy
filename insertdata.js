@@ -46,7 +46,7 @@ async function seedDB() {
         const hrstart = process.hrtime();
         let arrayData = [];
 
-        for (let y = 0; y < 10; y++) {
+        for (let y = 0; y < 1; y++) {
 
             for (let x = 0; x < 10; x++) {
                 let result = await runningNumber.findOneAndUpdate(

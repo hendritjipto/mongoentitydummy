@@ -52,14 +52,35 @@ node insertdata.js
 Below are the sample data
 
 ```json
-{
-  "_id": "64997323b4a11a5c56c28473",
-  "cid": "00000001",
-  "intra": true,
-  "entity_name": "MongoDB Inc",
-  "account_number": "00000001",
-  "alias": "Karl Schumm 00000001",
-  "date_created": "2023-04-04T18:12:23.214Z",
-  "date_updated": "2023-04-04T18:17:23.214Z"
-}
+[
+  {
+    "cid": "00000001",
+    "contacts": [
+      {
+        "intra": true,
+        "entity_name": "Microsoft Corporation",
+        "account_number": "00000000",
+        "alias": "Audreanne",
+        "date_created": "2023-04-02T12:21:19.147Z",
+        "date_updated": "2023-04-02T12:26:19.147Z"
+      },
+      {
+        "intra": true,
+        "entity_name": "The Walt Disney Company",
+        "account_number": "00000001",
+        "alias": "Tracy",
+        "date_created": "2023-04-03T13:50:05.977Z",
+        "date_updated": "2023-04-03T13:55:05.977Z"
+      },
+      {
+        "intra": false,
+        "entity_name": "Alphabet Inc. (Google)",
+        "account_number": "00000002",
+        "alias": "Bernice",
+        "date_created": "2023-04-15T15:10:43.034Z",
+        "date_updated": "2023-04-15T15:15:43.034Z"
+      }
+    ]
+  }
+]
 ```

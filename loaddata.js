@@ -42,19 +42,32 @@ function getTime() {
 }
 
 export default function loadData(number) {
-    updateEntityName();
-    getTime();
+
     let padding = number.toString().padStart(8, '0');
 
-    let profile = {
+    let contact = {
         cid: padding,
-        intra: true,
-        entity_name: entityN.name,
-        account_number: padding,
-        alias: faker.name.fullName() + " " + padding,
-        date_created: getCUTime.createdTime,
-        date_updated: getCUTime.updateTime
+        contacts: []
     }
 
-    return profile;
+    for (let i = 0; i < 3; i++) {
+        updateEntityName();
+        getTime();
+
+        let padding2 = i.toString().padStart(8, '0');
+
+        let contactarray = {
+            intra: faker.datatype.boolean(),
+            entity_name: entityN.name,
+            account_number: padding2,
+            alias: faker.name.firstName(),
+            date_created: getCUTime.createdTime,
+            date_updated: getCUTime.updateTime
+        }
+
+        contact.contacts.push(contactarray)
+
+    }
+
+    return contact;
 }
